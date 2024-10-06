@@ -17,6 +17,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
         
         let locationsHandler = LocationsHandler.shared
         locationsHandler.startUpdatingLocation()
+        locationsHandler.backgroundUpdates = true
         
         return true
     }
