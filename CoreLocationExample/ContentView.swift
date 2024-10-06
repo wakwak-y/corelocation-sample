@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var locationsHandler = LocationsHandler.shared
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Location: \(self.locationsHandler.location.description)")
         }
         .padding()
     }
